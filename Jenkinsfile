@@ -1,10 +1,18 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'slave-3905'
+    }
+    
+  }
   stages {
-    stage('') {
+    stage('check out') {
       steps {
-        sh 'ls'
+        git(url: 'git@github.com:githubtest007/springBoot.git', branch: 'master')
       }
     }
+  }
+  environment {
+    REPO_URL = 'https://github.com/githubtest007/springBoot'
   }
 }
