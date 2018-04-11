@@ -6,7 +6,7 @@ pipeline {
     
   }
   stages {
-    stage('check out') {
+    stage('branches') {
       steps {
         git(url: 'git@github.com:githubtest007/springBoot.git', branch: 'master')
       }
