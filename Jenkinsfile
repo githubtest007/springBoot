@@ -12,7 +12,4 @@ pipeline {
       }
     }
   }
-  environment {
-    REPO_URL = 'https://github.com/githubtest007/springBoot'
-  }
 }
