@@ -6,9 +6,9 @@ pipeline {
     
   }
   stages {
-    stage('check out') {
+    stage('build') {
       steps {
-        git(url: 'git@github.com:githubtest007/springBoot.git', branch: 'master')
+        sh 'mvn install'
       }
     }
   }
