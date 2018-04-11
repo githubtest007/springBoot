@@ -16,5 +16,10 @@ pipeline {
         }
       }
     }
+    stage('sonar') {
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
